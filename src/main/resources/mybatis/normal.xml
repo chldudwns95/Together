@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="normal">
+
+	<select id="list" resultType="Normal">
+		SELECT * FROM board_normal
+		ORDER BY board_id DESC
+	</select>
+	
+	<insert id="add">
+		INSERT INTO board_normal (board_id, usr_id, board_title, board_sort, board_date, board_content)
+		VALUES (BOARD_ID_SEQUENCE.NEXTVAL, #{usrId}, #{boardTitle}, #{boardSort}, #{boardDate, jdbcType=VARCHAR}, #{boardContent})
+	</insert>
+	
+	<update id="update">
+		UPDATE board_normal 
+		SET usr_id=#{usrId},
+			board_title=#{boardTitle},
+			board_sort=#{boardSort},
+			board_date=#{boardDate, jdbcType=VARCHAR},
+			board_content=#{boardContent},
+			board_update=#{boardUpdate , jdbcType=VARCHAR},
+			board_ing=#{boardIng}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM board_normal
+		WHERE board_id =#{boardId}	
+	</delete>
+	
+	<select id="item" resultType="Normal">
+		SELECT * FROM board_normal
+		WHERE board_id =#{boardId}	
+	</select>
+</mapper>

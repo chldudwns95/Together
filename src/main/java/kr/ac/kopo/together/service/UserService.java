@@ -1,0 +1,13 @@
+package kr.ac.kopo.together.service;
+
+import java.util.List;
+
+import kr.ac.kopo.together.model.User;
+
+public interface UserService {
+
+	List<User> list();
+
+	void add(User item);
+
+}
