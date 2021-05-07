@@ -44,4 +44,12 @@ public class RootController {
 	 return "FAIL";
 	}
 	
+	@ResponseBody
+	@GetMapping("/checkNick")
+	String checkNick(String id) {
+		if(service.checkNick(id))
+			return "OK";
+		
+		return "FAIL";
+	}
 }

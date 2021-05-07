@@ -12,4 +12,6 @@ public interface UserService {
 
 	boolean checkID(String id);
 
+	boolean checkNick(String id);
+
 }

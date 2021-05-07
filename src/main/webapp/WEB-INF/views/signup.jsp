@@ -7,6 +7,27 @@
 <title>회원가입</title>
 </head>
 <script>
+	function checkNick(){
+		const form = document.getElementById("form")
+
+		const xhr = new XMLHttpRequest();
+		xhr.open("GET","checkNick?id=" + form.usrNickname.value, true);
+		
+		xhr.onreadystatechange = function() { 	//xhr상태 변경되면 할일			
+			if(xhr.readyState == XMLHttpRequest.DONE){ //readystate ==done 요청이 완료되면 할일				
+				if(xhr.status == 200){ //성공					
+					const result = xhr.responseText;
+					if(result == "OK"){
+						alert("사용 가능한 닉네임 입니다.");
+						form.checkNick.value = form.usrNickname.value;
+					} else
+						alert("사용 불가능한 닉네임 입니다.");
+				}
+			}
+		};
+
+		xhr.send();
+	}
 	function checkID(){
 		const form = document.getElementById("form");
 		const xhr = new XMLHttpRequest();
@@ -63,6 +84,9 @@
 			alert("닉네임을 입력해주세요")
 			form.usrNickname.focus();
 			return;
+		if(form.checkNick.value ==""){
+			alert("닉네임 중복확인을 하셔야합니다")
+			}
 			
 		}
 		if(form.usrName.value == ""){
@@ -100,6 +124,7 @@
 	<div>
 		<form id="form" method="post">
 		<input type="hidden" name="checkID" value="">
+		<input type="hidden" name="checkNick" value="">
 	<div>
 		<input type="hidden" type="number" value="2" name="usrSort" >
 	</div>		

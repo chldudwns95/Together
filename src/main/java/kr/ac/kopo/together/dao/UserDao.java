@@ -12,4 +12,6 @@ public interface UserDao {
 
 	int checkID(String id);
 
+	int checkNick(String id);
+
 }

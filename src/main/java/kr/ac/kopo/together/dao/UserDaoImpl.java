@@ -30,4 +30,9 @@ public class UserDaoImpl implements UserDao {
 		return sql.selectOne("user.checkid", id);
 	}
 
+	@Override
+	public int checkNick(String id) {
+		return sql.selectOne("user.checknick", id);
+	}
+
 }

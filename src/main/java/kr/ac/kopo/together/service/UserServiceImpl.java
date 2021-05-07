@@ -33,4 +33,12 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 
+	@Override
+	public boolean checkNick(String id) {
+		if(dao.checkNick(id) == 0)
+			return true;
+		
+		return false;
+	}
+
 }
