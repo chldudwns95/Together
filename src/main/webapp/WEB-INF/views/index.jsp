@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Togaether</title>
+<title>같이 가치 투개더</title>
  <link href="css/index.css" rel="stylesheet" type="text/css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- 제이쿼리 불러오기 --> <script
@@ -27,14 +27,15 @@
 		<ul>
 			<li><a href="./guide">이용안내</a></li>
 			<li><a href="take/list">이용하기</a></li>
-			<li><a href="take/list">정보공유</a></li>
+			<li><a href="board/normal/list">정보공유</a></li>
+			<li><a href="board/goods/list">상품</a></li>
 		</ul>
 	</div>
 
 	<div class="user">
 		<ul>
-			<li>로그인</li>
-			<li>회원가입</li>
+			<a href="login"><li>로그인</li></a>
+			<a href="signup"><li>회원가입</li></a>
 		</ul>
 	</div>
 	

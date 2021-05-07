@@ -19,7 +19,8 @@
 	<div>
 		<label>작성자</label>
 		<input type="number" name="usrId">
-	</div>		
+	</div>	
+		
 	<div>
 		<label>산책이 필요한 날짜</label><!-- 돌봄 -->
 		<input type="Date" name="serviceStartDate">

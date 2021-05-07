@@ -7,10 +7,15 @@
 	</select>
 	
 	<insert id="add">
-	INSERT INTO usr(USR_ID, USR_NAME, USR_TELL, USR_ADDR, USER_SORT, USR_POINT,
-					USR_NICKNAME, USR_HISTORY, USR_EMAIL, USR_PASSWORD, USR_CAREER, USR_CIRTIFICATE)
+	INSERT INTO usr(USR_ID, USR_NAME, USR_TELL, USR_ADDR, USR_SORT, USR_POINT,
+					USR_NICKNAME, USR_HISTORY, USR_EMAIL, USR_PASSWORD, USR_CAREER, USR_CIRTIFICATE) 
 			
-			VALUES( USR_ID_SEQUENVE.NEXTVAL, #{userName}, #{usrTell},#{usrAddr}, #{usrSort}, #{usrPoint},
-					#{usrNickname},#{usrHistory},#{usrEmail},#{usrPassword},#{usrCareer},#{usrCirificate})
+			VALUES( USR_ID_SEQUENCE.NEXTVAL, #{usrName}, #{usrTell},#{usrAddr}, #{usrSort}, #{usrPoint},
+					#{usrNickname},#{usrHistory},#{usrEmail},#{usrPassword},#{usrCareer},#{usrCirtificate})
 	</insert>
+	
+	<select id="checkid" resultType="Integer">
+		SELECT COUNT(*) FROM usr
+		WHERE USR_EMAIL = #{usrEmail}
+	</select>
 </mapper>

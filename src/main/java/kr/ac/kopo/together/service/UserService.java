@@ -10,4 +10,6 @@ public interface UserService {
 
 	void add(User item);
 
+	boolean checkID(String id);
+
 }

@@ -10,4 +10,6 @@ public interface UserDao {
 
 	void add(User item);
 
+	int checkID(String id);
+
 }

@@ -25,4 +25,9 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
+	@Override
+	public int checkID(String id) {
+		return sql.selectOne("user.checkid", id);
+	}
+
 }
