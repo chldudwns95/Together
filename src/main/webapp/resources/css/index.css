@@ -3,8 +3,8 @@
 @import "reset.css";
 
 a:link { text-decoration: none; }
-a:link { color: #000; }
-a:visited { color: #000; }
+a:link { color: #3c3c3c; }
+a:visited { color: #3c3c3c; }
 
 
 .top{
@@ -43,6 +43,96 @@ a:visited { color: #000; }
 
 .user li{
 	display: flex;
-    margin-left: 20px;
+    margin-left: 0px;
+    margin: auto;
 }
 
+.slider-div img {
+	width: 100%;
+	border-bottom:1px solid #d3d3d3;
+}
+
+.go {
+	display: flex;
+	
+	padding-bottom: 100px;
+	justify-content: center;
+	border-bottom:1px solid #d3d3d3;
+}
+
+.search_img {
+	display: flex;
+	padding: 80px;
+	justify-content: center;
+}
+
+.howto img {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border-bottom:1px solid #d3d3d3;
+}
+
+.content3 {
+	
+	display: flex;
+	padding: 100px;
+	margin-left: 300px;
+	
+}
+
+footer {
+	
+	background-color: #d7d7d7;
+	border-top:1px solid #d3d3d3;
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 320px;
+	padding: 50px;
+}
+
+.footer_wrap {
+	display: flex;
+	justify-content: center;
+}
+
+.text {
+	display: flex;
+	justify-content: flex-start;
+	color: #3c3c3c;
+	width: 480px;
+}
+
+.copy {
+	color: #3c3c3c;
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+}
+
+.footer_list {
+	color: #3c3c3c;
+	display: flex;
+	justify-content: center;
+	
+}
+
+.footer_list li {
+	padding: 5px;
+	margin-right: 100px;
+}
+
+.footer_img {
+	display: flex;
+	justify-content: flex-end;
+	width: 275px;
+}
+
+.list_title {
+	margin-bottom: 10px;
+	font-size: 13pt;
+	color: #000000;
+}

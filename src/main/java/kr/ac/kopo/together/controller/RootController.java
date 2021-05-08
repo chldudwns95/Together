@@ -21,6 +21,12 @@ public class RootController {
 	String index() {
 		return "index";
 	}
+	@RequestMapping("/guide")
+	String guide() {
+		return "guide";
+	}
+	
+	
 	@GetMapping("/login")
 	String login() {
 		return "login";
