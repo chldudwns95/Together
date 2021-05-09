@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+	<select id="list" resultType="User">
+		SELECT * FROM usr
+	</select>
+	
+	<insert id="add">
+	INSERT INTO usr(USR_ID, USR_NAME, USR_TELL, USR_ADDR, USR_SORT, USR_POINT,
+					USR_NICKNAME, USR_HISTORY, USR_EMAIL, USR_PASSWORD, USR_CAREER, USR_CIRTIFICATE) 
+			
+			VALUES( USR_ID_SEQUENCE.NEXTVAL, #{usrName}, #{usrTell},#{usrAddr}, #{usrSort}, #{usrPoint},
+					#{usrNickname},#{usrHistory},#{usrEmail},#{usrPassword},#{usrCareer},#{usrCirtificate})
+	</insert>
+	
+	<select id="checkid" resultType="Integer">
+		SELECT COUNT(*) FROM usr
+		WHERE USR_EMAIL = #{usrEmail}
+	</select>
+	
+	<select id="checknick" resultType="Integer">
+		SELECT COUNT(*) FROM usr
+		WHERE USR_NICKNAME =#{usrNickname}
+	</select>
+	<select id="login" resultType="User">
+		SELECT * FROM usr
+		WHERE USR_EMAIL=#{usrEmail} AND USR_PASSWORD =#{usrPassword}
+	</select>
+</mapper>

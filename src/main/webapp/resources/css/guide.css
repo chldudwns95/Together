@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import "reset.css";
+
+a:link { text-decoration: none; }
+a:link { color: #000; }
+a:visited { color: #000; }
+
+
+.top{
+ 	width: 100%;
+    min-height: 100px;
+    display: flex;
+   	justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #d3d3d3;
+}
+
+.menu ul{
+	display: flex;
+    margin-left: 60px;
+    color: #000000;
+}
+
+.menu li{
+	display: flex;
+    margin-left: 0px;
+    margin: auto;
+}
+
+
+
+.user ul{
+	background-color: #f19149;
+	border-radius: 80px;
+	height: 40px;
+	width: 200px;
+	display: flex;
+    margin-right: 0px;
+    color: #ffffff;
+}
+
+.user li{
+	display: flex;
+    margin-left: 20px;
+}

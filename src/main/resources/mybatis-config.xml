@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>		
+		 <setting name="cacheEnabled" value="false" />
+        <setting name="jdbcTypeForNull" value="NULL" />
+	</settings>
+	
+	<typeAliases>
+	<typeAlias type="kr.ac.kopo.together.model.Take" alias="Take"/>
+	<typeAlias type="kr.ac.kopo.together.model.User" alias="User"/>
+		<typeAlias type="kr.ac.kopo.together.model.Goods" alias="Goods"/>
+	<typeAlias type="kr.ac.kopo.together.model.Normal" alias="Normal"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mybatis/take.xml"/>
+		<mapper resource="mybatis/user.xml"/>
+		<mapper resource="mybatis/goods.xml"/>
+		<mapper resource="mybatis/normal.xml"/>
+	</mappers>
+</configuration>
